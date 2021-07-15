@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TechStyle.UI/1.0.0": {
+        "dependencies": {
+          "TechStyle.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "TechStyle.UI.dll": {}
+        }
+      },
+      "TechStyle.Dominio/1.0.0": {
+        "runtime": {
+          "TechStyle.Dominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TechStyle.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TechStyle.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
