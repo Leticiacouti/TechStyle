@@ -1,4 +1,7 @@
-﻿namespace TechStyle.Dominio.Modelo
+﻿using TechStyle.Dominio.Repositorio;
+    using System;
+
+namespace TechStyle.Dominio.Modelo
 {
     public class Produto
     {
@@ -8,25 +11,40 @@
         public string Nome { get; private set; }
         public string SKU { get; private set; }
         public Segmento Segmento { get; private set; }
-        public DetalheProduto DetalheProduto { get; private set; }
+        public string Material { get; set; }
+        public string Cor { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public string Tamanho { get; set; }
         public bool Ativo { get; private set; }
 
         public Produto()
         {
             Segmento = new Segmento();
-            DetalheProduto = new DetalheProduto();
+            //DetalheProduto = new DetalheProduto();
         }
 
-        public void Cadastrar(decimal valorVenda, string nome, string sku, Segmento segmento, DetalheProduto detalheProduto)
+        public void Cadastrar(string nome, string material, string cor, string tamanho, string modelo, string marca,
+                              Segmento segmento, string sku, decimal valorVenda)
         {
-            Id = QuantidadeId + 1;
-            QuantidadeId++;
-            ValorVenda = valorVenda;
-            Nome = nome;
-            Segmento = segmento;
-            DetalheProduto = detalheProduto;
-            SKU = sku;
-            Ativo = false;
+            // Criar lista de Ids 
+            
+            if (segmento != null)
+            {
+                Segmento = segmento;
+                Id = QuantidadeId + 1;
+                QuantidadeId++;
+                ValorVenda = valorVenda;
+                Nome = nome;
+                SKU = sku;
+                Material = material;
+                Cor = cor;
+                Marca = marca;
+                Modelo = modelo;
+                Tamanho = tamanho;
+                Ativo = false;
+            }
+           
 
             // ValidarDuplicidade
 
@@ -39,18 +57,25 @@
             /* 5, moda feminina, lingerie */
         }
 
-        public void AlterarItemProduto(decimal valorVenda, string nome, string sku, int idSegmento, DetalheProduto detalheProduto)
+        public void AlterarItemProduto(string nome, string material, string cor, string tamanho,
+                              string modelo, string marca, Segmento segmento, string sku, decimal valorVenda)
         {
-            ValorVenda = (valorVenda == 0) ? ValorVenda : valorVenda;
             Nome = string.IsNullOrEmpty(nome.Trim()) ? Nome : nome;
+            Material = string.IsNullOrEmpty(material.Trim()) ? Material : material;
+            Cor = string.IsNullOrEmpty(cor.Trim()) ? Cor : cor;
+            Tamanho = string.IsNullOrEmpty(tamanho.Trim()) ? Tamanho : tamanho;
+            Modelo = string.IsNullOrEmpty(modelo.Trim()) ? Modelo : modelo;
+            Marca = string.IsNullOrEmpty(marca.Trim()) ? Marca : marca;
+            Segmento = segmento;
             SKU = string.IsNullOrEmpty(sku.Trim()) ? SKU : sku;
-            
-        }
+            ValorVenda = (valorVenda == 0) ? ValorVenda : valorVenda;
 
-        public override string ToString()
-        {
-            return Nome + ", " + ValorVenda + ", " + SKU + ", " + DetalheProduto + ", " + Segmento;
         }
+        
+        //public override string ToString()
+        //{
+        //    return Nome + ", " + ValorVenda + ", " + SKU + ", " + ", " + Segmento;
+        //}
 
 
 

@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\TechStyle-main",
+    "\\TechStyle-main\\TechStyle.Console",
     "\\TechStyle-main\\TechStyle.Dominio",
+    "\\TechStyle-main\\TechStyle.Dominio\\Modelo",
     "\\TechStyle-main\\TechStyle.Dominio\\Repositorio"
   ],
-  "SelectedNode": "\\TechStyle-main\\TechStyle.Dominio\\Repositorio\\SegmentoRepositorio.cs",
+  "SelectedNode": "\\TechStyle-main\\TechStyle.Dominio\\Repositorio\\ProdutoRepositorio.cs",
   "PreviewInSolutionExplorer": false
 }

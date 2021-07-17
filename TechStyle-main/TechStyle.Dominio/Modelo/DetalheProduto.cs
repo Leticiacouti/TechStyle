@@ -1,10 +1,10 @@
-﻿using System;
+﻿/*using System;
 
 namespace TechStyle.Dominio.Modelo
 {
     public class DetalheProduto
     {
-        public string Material { get; set; }
+        /*public string Material { get; set; }
         public string Cor { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }
@@ -31,4 +31,4 @@ namespace TechStyle.Dominio.Modelo
             return Material+ ", " + Cor + ", "+Marca+", "+ Modelo + ", "+ Tamanho;
         }
     }
-}
+}*/

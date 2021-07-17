@@ -6,7 +6,7 @@ namespace TechStyle.Dominio.Repositorio
 {
     public class SegmentoRepositorio
     {
-        private List<Segmento> listaDeSegmentos; // nossa tabela de mentirinha
+        public  List<Segmento> listaDeSegmentos;
 
         public SegmentoRepositorio()
         {
@@ -16,7 +16,7 @@ namespace TechStyle.Dominio.Repositorio
         public bool Incluir(string categoria, string subcategoria)
         {
             var segmento = new Segmento();
-            segmento.Cadastrar(listaDeSegmentos.Count + 1, categoria, subcategoria);
+            segmento.Cadastrar(categoria, subcategoria);
 
             if (Existe(segmento))
                 return false;
@@ -25,19 +25,47 @@ namespace TechStyle.Dominio.Repositorio
             return true;
         }
 
-        public bool Alterar(int id, Segmento segmento)
+        public bool Alterar(string categoria, string subCategoria, int id)
         {
             var segmentoEncontrado = SelecionarPorId(id);
 
-            if (Existe(segmento))
-                return false;
-            else
+            Segmento segmentoLista = listaDeSegmentos.Find(x => x.Categoria == categoria && x.SubCategoria == subCategoria);
+            if(segmentoLista != null)
             {
-                
-                int indice = listaDeSegmentos.FindIndex(x => x == segmentoEncontrado);
-                listaDeSegmentos[indice] = segmento;
-                
-            } return true;
+                if (Existe(segmentoLista))
+                    return false;
+            }
+            else
+                segmentoEncontrado.Alterar(categoria, subCategoria);
+                return true;
+            /*
+             
+                1, feminino, praia
+                2, feminino, social
+                3, feminino, fitness
+
+            procurar item na lista por id
+
+            SegmentoRepo.VericarDuplicidade(feminino, lingerie)
+            Segmento.Alterar( 3, feminino, lingerie)
+
+
+
+
+            */
+
+
+                /*var segmentoEncontrado = SelecionarPorId(id);
+
+                if (segmentoEncontrado != null)
+                {
+                    if(Existe(segmentoEncontrado) != true)
+                    {
+                        Segmento seg = new Segmento();
+                     segmentoEncontrado.Categoria = string.IsNullOrEmpty(categoria.Trim()) ? Categoria : categoria;
+                     segmentoEncontrado.SubCategoria = string.IsNullOrEmpty(subCategoria.Trim()) ? SubCategoria : subCategoria;
+                    }
+                }*/
         }
 
         public Segmento SelecionarPorId(int id)

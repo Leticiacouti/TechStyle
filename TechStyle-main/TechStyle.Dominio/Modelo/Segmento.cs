@@ -11,17 +11,16 @@ namespace TechStyle.Dominio.Modelo
         public bool Ativo { get; set; }
 
 
-        internal void Cadastrar(int id, string categoria, string subcategoria)
+        internal void Cadastrar(string categoria, string subcategoria)
         {
             Id = QuantidadeId + 1;
             QuantidadeId++;
-            Id = id;
             Categoria = categoria;
             SubCategoria = subcategoria;
             Ativo = true;
         }
 
-        public void Alterar(string categoria, string subCategoria)
+       internal void Alterar(string categoria, string subCategoria)
         {
             Categoria = string.IsNullOrEmpty(categoria.Trim()) ? Categoria : categoria;
             SubCategoria = string.IsNullOrEmpty(subCategoria.Trim()) ? SubCategoria : subCategoria;
@@ -34,7 +33,7 @@ namespace TechStyle.Dominio.Modelo
 
         public override string ToString()
         {
-            return Categoria + ", " + SubCategoria;
+            return Id + ", " + Categoria + ", " + SubCategoria;
         }
     }
 }
