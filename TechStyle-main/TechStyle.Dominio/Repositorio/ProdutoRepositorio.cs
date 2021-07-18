@@ -7,7 +7,7 @@ using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dominio.Repositorio
 {
-    class ProdutoRepositorio
+    public class ProdutoRepositorio
     {
         public List<Produto> listaDeProdutos;
         public ProdutoRepositorio()
@@ -48,6 +48,19 @@ namespace TechStyle.Dominio.Repositorio
                 produtoEncontrado.AlterarItemProduto(nome, material, cor, tamanho, modelo, marca, segmento, sku,
                                                      valorVenda);
             return true;
+        }
+
+        public bool AlterarValorVenda(int id, decimal valor)
+        {        
+            var produtoEncontrado = SelecionarPorId(id);
+
+            if (produtoEncontrado != null)
+            {
+                produtoEncontrado.AlterarValorVenda(valor);
+                return true;
+            }
+            else
+                return false;
         }
 
         public Produto SelecionarPorId(int id)

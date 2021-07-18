@@ -68,14 +68,20 @@ namespace TechStyle.Dominio.Modelo
             Marca = string.IsNullOrEmpty(marca.Trim()) ? Marca : marca;
             Segmento = segmento;
             SKU = string.IsNullOrEmpty(sku.Trim()) ? SKU : sku;
-            ValorVenda = (valorVenda == 0) ? ValorVenda : valorVenda;
-
+            ValorVenda = (valorVenda <= 0) ? ValorVenda : valorVenda;
         }
-        
-        //public override string ToString()
-        //{
-        //    return Nome + ", " + ValorVenda + ", " + SKU + ", " + ", " + Segmento;
-        //}
+
+        // Incluir alterar status
+
+        public void AlterarValorVenda(decimal valor)
+        {
+            ValorVenda = valor <= 0 ? ValorVenda : valor;
+        }
+
+        public override string ToString()
+        {
+            return Id + " - " + Nome + ", " + ValorVenda;
+        }
 
 
 
