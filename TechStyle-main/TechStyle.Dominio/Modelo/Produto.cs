@@ -28,7 +28,7 @@ namespace TechStyle.Dominio.Modelo
                               Segmento segmento, string sku, decimal valorVenda)
         {
             // Criar lista de Ids 
-            
+
             if (segmento != null)
             {
                 Segmento = segmento;
@@ -44,8 +44,6 @@ namespace TechStyle.Dominio.Modelo
                 Tamanho = tamanho;
                 Ativo = false;
             }
-           
-
             // ValidarDuplicidade
 
             // chamar insercao no banco
@@ -82,8 +80,5 @@ namespace TechStyle.Dominio.Modelo
         {
             return Id + " - " + Nome + ", " + ValorVenda;
         }
-
-
-
     }
 }

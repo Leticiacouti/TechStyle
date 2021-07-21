@@ -3,7 +3,7 @@
     public class ProdutoEmEstoque
     {
         public int Id { get; set; }
-        public int QuantidadeMinima { get; set; }
+        public int QuantidadeMinima { get; set; } //teste
         public string Local { get; set; }
         public int QuantidadeLocal { get; set; }
         public int QuantidadeTotal { get; set; }

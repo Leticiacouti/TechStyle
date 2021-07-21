@@ -7,7 +7,7 @@
 
 //namespace TechStyle.Dominio.Repositorio
 //{
-//    class ProdutoEmEstoqueRepositorio
+//    class EstoqueRepositorio
 //    {
 
 //        public List<ProdutoEmEstoque> Estoque;

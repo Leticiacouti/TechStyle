@@ -113,7 +113,7 @@ namespace TechStyle.UI
                             Console.Write("Digite a subcategoria: ");
                             string subCategoria = Console.ReadLine();
 
-                            segRep.Incluir(categoria, subCategoria);
+                            segRep.Incluir(categoria, subCategoria); // Inclusão de segmento apenas para teste, no projeto final não pode fazer isso
                             Segmento segmentoProduto = segRep.listaDeSegmentos.Find(x => x.Categoria == categoria && x.SubCategoria == subCategoria);
 
                             produtoRep.Incluir(nome, cor, marca, modelo, material, sku, tamanho, segmentoProduto, valor);
@@ -164,7 +164,7 @@ namespace TechStyle.UI
                         Console.Write("Digite a subcategoria: ");
                         string nSubCategoria = Console.ReadLine();
 
-                        segRep.Incluir(nCategoria, nSubCategoria);
+                        segRep.Incluir(nCategoria, nSubCategoria);// Inclusao de segmento apenas para teste, no projeto final não podemos fazer isso
                         Segmento nSegmentoProduto = segRep.listaDeSegmentos.Find(x => x.Categoria == nCategoria && x.SubCategoria == nSubCategoria);
 
                         produtoRep.Alterar(produtoId, nNome, nMaterial, nCor, nTamanho, nModelo, nMarca, nSegmentoProduto, nSku, nValor);
