@@ -1,9 +1,9 @@
 ﻿namespace TechStyle.Dominio.Modelo
 {
-    public class ProdutoEmEstoque
+    public class Estoque
     {
         public int Id { get; set; }
-        public int QuantidadeMinima { get; set; } //teste
+        public int QuantidadeMinima { get; set; } 
         public string Local { get; set; }
         public int QuantidadeLocal { get; set; }
         public int QuantidadeTotal { get; set; }
@@ -20,5 +20,14 @@
             }
         }
 
+        public void AlterarLocal(string local)
+        {
+            Local = string.IsNullOrEmpty(local.Trim().ToUpper()) ? Local : local;
+        }
+
+        public void AlterarQuantidadeMinima(int qtd)
+        {
+            QuantidadeMinima = (qtd <= 0) ? QuantidadeMinima : qtd;
+        }
     }  
 }
