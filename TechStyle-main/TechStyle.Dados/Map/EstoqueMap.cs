@@ -29,6 +29,9 @@ namespace TechStyle.Dados.Map
                 .HasColumnType("varchar(100)")
                 .IsRequired();
 
+            builder.HasOne<Produto>(p => p.Produto)
+                   .WithOne(x => x.Estoque)
+                   .HasForeignKey<Estoque>(i => i.ProdutoId);
         }
     }
 }

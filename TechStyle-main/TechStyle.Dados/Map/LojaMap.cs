@@ -25,7 +25,9 @@ namespace TechStyle.Dados.Map
                 .HasColumnType("int(5)")
                 .IsRequired();
 
-            
+            builder.HasMany<Produto>(p => p.Produto)
+                .WithOne(s => s.Segmento)
+                .HasForeignKey(i => i.IdSegmento);
         }
     }
 }

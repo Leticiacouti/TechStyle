@@ -10,6 +10,7 @@ namespace TechStyle.Dominio.Modelo
         public int QuantidadeLocal { get; set; }
         public int QuantidadeTotal { get; set; }
         public Produto Produto { get; set; }
+        public int ProdutoId { get; set; }
 
         public void Cadastrar(Produto produto, int qtdMin, string local)
         {
