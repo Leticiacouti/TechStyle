@@ -7,7 +7,7 @@ namespace TechStyle.Dados
 {
     public class Contexto : DbContext
     {
-        public DbSet<Segmento> Segmento { get; set; } //Colocar todas classes q se tornarão tabela
+        public DbSet<Segmento> Segmento { get; set; } 
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Estoque> Estoque { get; set; }
         public DbSet<Loja> Loja { get; set; }
@@ -25,6 +25,7 @@ namespace TechStyle.Dados
             modelBuilder.ApplyConfiguration(new ProdutoMap());
             modelBuilder.ApplyConfiguration(new EstoqueMap());
             modelBuilder.ApplyConfiguration(new LojaMap());
+            modelBuilder.ApplyConfiguration(new VendasMap());
             base.OnModelCreating(modelBuilder);
         }
 
