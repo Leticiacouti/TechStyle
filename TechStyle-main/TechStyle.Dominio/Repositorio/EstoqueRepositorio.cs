@@ -63,12 +63,6 @@ namespace TechStyle.Dominio.Repositorio
             return listaEstoque.Any(x => x.Produto == estoque.Produto);
         }
 
-        public void TransferirParaLoja(int id, int qtd) 
-        {
-            Estoque estoqueEncontrado = SelecionarPorId(id);
-            
-            estoqueEncontrado.QuantidadeLocal -= qtd;
-        }
+        
     }
 }
-

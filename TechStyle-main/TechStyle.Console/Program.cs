@@ -10,6 +10,7 @@ namespace TechStyle.UI
         {
             SegmentoRepositorio segRep = new();
             ProdutoRepositorio produtoRep = new();
+            EstoqueRepositorio estoqueRep = new();
             Menu();
             string opcao = Console.ReadLine().ToUpper();
 
@@ -202,6 +203,32 @@ namespace TechStyle.UI
                         break;
                     #endregion
 
+                    #region cadastrar estoque
+                    case "9":
+                        Console.Clear();
+                        Console.WriteLine("Digite o Id do produto que voce deseja cadastrar no estoque: ");
+                        int produto_Id = int.Parse(Console.ReadLine());
+                        Estoque est1 = new();
+                        estoqueRep.Incluir(produtoRep.SelecionarPorId(produto_Id), 50, "Prateleira 1");
+                        break;
+
+                    #endregion
+
+                    #region Visualizar estoque
+                    case "10":
+                        Console.WriteLine("Estoque: ");
+                        foreach (Estoque x in estoqueRep.listaEstoque)
+                        {
+                            Console.WriteLine(x);
+                        }
+                        break;
+                    #endregion
+
+                    #region cadastrar loja
+                    case "11":
+
+                        break;
+                    #endregion
                     case "C":
                         Console.Clear();
                         break;

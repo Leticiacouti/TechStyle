@@ -10,6 +10,7 @@ namespace TechStyle.Dominio.Modelo
         public decimal ValorVenda { get; private set; }
         public string Nome { get; private set; }
         public string SKU { get; private set; }
+        public int IdSegmento { get; set; }
         public Segmento Segmento { get; private set; }
         public string Material { get; set; }
         public string Cor { get; set; }
@@ -44,15 +45,6 @@ namespace TechStyle.Dominio.Modelo
                 Tamanho = tamanho;
                 Ativo = false;
             }
-            // ValidarDuplicidade
-
-            // chamar insercao no banco
-            // ID, CATEGORIA,    SUB       = A SOMA DE TUDO É O SEGMENTO
-            /* 1, moda feminina, praia */
-            /* 2, moda feminina, casual */
-            /* 3, moda feminina, social */
-            /* 4, moda feminina, fitness */
-            /* 5, moda feminina, lingerie */
         }
 
         public void AlterarItemProduto(string nome, string material, string cor, string tamanho,

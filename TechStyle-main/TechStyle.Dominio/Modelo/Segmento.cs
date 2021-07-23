@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TechStyle.Dominio.Modelo
 {
@@ -9,6 +10,7 @@ namespace TechStyle.Dominio.Modelo
         public string Categoria { get; private set; }
         public string SubCategoria { get; private set; }
         public bool Ativo { get; set; }
+        public List<Produto> Produtos { get; set; }
 
 
         internal void Cadastrar(string categoria, string subcategoria)

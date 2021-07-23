@@ -25,6 +25,10 @@ namespace TechStyle.Dados.Map
                 .HasColumnType("varchar(100)")
                 .IsRequired();
             // throw new NotImplementedException(); -> apagar
+
+            builder.HasMany<Produto>(p => p.Produtos)
+                .WithOne(s => s.Segmento)
+                .HasForeignKey(i => i.IdSegmento);
         }
     }
 }

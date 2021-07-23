@@ -12,7 +12,7 @@ namespace TechStyle.Dominio.Repositorio
         {
             listaDeSegmentos = new List<Segmento>();
         }
-
+        
         public bool Incluir(string categoria, string subcategoria)
         {
             var segmento = new Segmento();
@@ -55,7 +55,7 @@ namespace TechStyle.Dominio.Repositorio
             */
 
 
-                /*var segmentoEncontrado = SelecionarPorId(id);
+            /*  var segmentoEncontrado = SelecionarPorId(id);
 
                 if (segmentoEncontrado != null)
                 {

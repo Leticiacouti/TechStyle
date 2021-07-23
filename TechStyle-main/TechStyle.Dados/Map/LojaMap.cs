@@ -24,6 +24,8 @@ namespace TechStyle.Dados.Map
             builder.Property(x => x.QuantidadeMinima)
                 .HasColumnType("int(5)")
                 .IsRequired();
+
+            
         }
     }
 }

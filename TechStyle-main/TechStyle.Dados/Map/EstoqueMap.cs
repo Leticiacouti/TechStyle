@@ -28,6 +28,7 @@ namespace TechStyle.Dados.Map
             builder.Property(x => x.Local)
                 .HasColumnType("varchar(100)")
                 .IsRequired();
+
         }
     }
 }
