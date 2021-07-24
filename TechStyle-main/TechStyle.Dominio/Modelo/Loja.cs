@@ -14,7 +14,7 @@ namespace TechStyle.Dominio.Modelo
         public int QuantidadeLocal { get; set; }
         public int QuantidadeMinima { get; set; }
 
-        internal void Cadastrar(Produto produto, int qtdMin)
+        public void Cadastrar(Produto produto, int qtdMin)
         {
             Id = produto.Id;
             Produto = produto;

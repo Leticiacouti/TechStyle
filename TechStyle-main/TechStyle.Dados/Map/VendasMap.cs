@@ -21,6 +21,10 @@ namespace TechStyle.Dados.Map
             builder.Property(x => x.ValorTotal)
                 .HasColumnType("decimal(5,2)")
                 .IsRequired();
+
+            builder.HasMany<PedidoDeVenda>(p => p.PedidoDeVendas)
+                .WithOne(x => x.Venda)
+                .HasForeignKey(i => i.Id);
         }
     }
 }

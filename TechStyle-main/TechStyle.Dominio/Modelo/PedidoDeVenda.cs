@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace TechStyle.Dominio.Modelo
 {
-    public class PedidoDeVenda
+    public class PedidoDeVenda // ItemVenda
     {
+        public int Id { get; set; }
         public Produto Produto { get; set; }
+        public Venda Venda { get; set; }
+        public int IdVendas { get; set; }
+        public int IdProduto { get; set; }
         public int Quantidade { get; set; }
 
         public decimal SubTotal()

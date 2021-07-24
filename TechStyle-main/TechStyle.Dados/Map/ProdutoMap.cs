@@ -48,6 +48,10 @@ namespace TechStyle.Dados.Map
             builder.Property(x => x.ValorVenda)
                 .HasColumnType("decimal(10,3)") // 10 representa o max de digitos, 3 a qtd de num pos virgula
                 .IsRequired();
+
+            builder.HasMany<PedidoDeVenda>(p => p.PedidoDeVenda)
+                .WithOne(s => s.Produto)
+                .HasForeignKey(i => i.IdProduto);
         }
     }
 }

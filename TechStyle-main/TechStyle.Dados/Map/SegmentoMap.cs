@@ -15,7 +15,7 @@ namespace TechStyle.Dados.Map
         {
             builder.ToTable("Segmento"); //Aqui damos nome para a tabela
 
-            builder.HasKey(x => x.Id); //Determinar chave primaria
+            builder.HasKey(x => x.Id); 
             
             builder.Property(x => x.Categoria)
                 .HasColumnType("varchar(100)")

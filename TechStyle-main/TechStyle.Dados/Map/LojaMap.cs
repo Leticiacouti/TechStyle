@@ -13,21 +13,21 @@ namespace TechStyle.Dados.Map
     {
         public void Configure(EntityTypeBuilder<Loja> builder)
         {
-            builder.ToTable("Segmento"); //Aqui damos nome para a tabela
+            builder.ToTable("Loja"); 
 
-            builder.HasKey(x => x.Id); //Determinar chave primaria
+            builder.HasKey(x => x.Id); 
 
             builder.Property(x => x.QuantidadeLocal)
-                .HasColumnType("int(5)")
+                .HasColumnType("int")
                 .IsRequired();
 
             builder.Property(x => x.QuantidadeMinima)
-                .HasColumnType("int(5)")
+                .HasColumnType("int")
                 .IsRequired();
 
-            builder.HasMany<Produto>(p => p.Produto)
-                .WithOne(s => s.Segmento)
-                .HasForeignKey(i => i.IdSegmento);
+            builder.HasOne<Produto>(p => p.Produto)
+                    .WithOne(x => x.Loja)
+                    .HasForeignKey<Loja>(i => i.IdProduto);
         }
     }
 }

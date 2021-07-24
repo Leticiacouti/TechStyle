@@ -12,6 +12,7 @@ namespace TechStyle.Dados
         public DbSet<Estoque> Estoque { get; set; }
         public DbSet<Loja> Loja { get; set; }
         public DbSet<Venda> Venda { get; set; }
+        public DbSet<PedidoDeVenda> PedidoDeVenda { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,6 +27,7 @@ namespace TechStyle.Dados
             modelBuilder.ApplyConfiguration(new EstoqueMap());
             modelBuilder.ApplyConfiguration(new LojaMap());
             modelBuilder.ApplyConfiguration(new VendasMap());
+            modelBuilder.ApplyConfiguration(new PedidoDeVendaMap());
             base.OnModelCreating(modelBuilder);
         }
 

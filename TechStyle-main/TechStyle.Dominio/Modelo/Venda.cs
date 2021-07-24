@@ -11,6 +11,7 @@ namespace TechStyle.Dominio.Modelo
         public int Id { get; set; }
         public decimal ValorTotal { get; set; }
         public List<PedidoDeVenda> PedidoDeVendas { get; set; } = new();
+        
 
         public void AddPedidoVenda(PedidoDeVenda pedidoDeVenda)
         {

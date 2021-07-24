@@ -1,5 +1,4 @@
-﻿using TechStyle.Dominio.Repositorio;
-    using System;
+﻿using System.Collections.Generic;
 
 namespace TechStyle.Dominio.Modelo
 {
@@ -17,6 +16,7 @@ namespace TechStyle.Dominio.Modelo
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Tamanho { get; set; }
+        public List<PedidoDeVenda> PedidoDeVenda { get; set; }
         public Estoque Estoque { get; set; }
         public Loja Loja { get; set; }
         public bool Ativo { get; private set; }

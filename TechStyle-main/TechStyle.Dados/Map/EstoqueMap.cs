@@ -18,11 +18,11 @@ namespace TechStyle.Dados.Map
             builder.HasKey(x => x.Id); 
 
             builder.Property(x => x.QuantidadeMinima)
-                .HasColumnType("int(5)")
+                .HasColumnType("int")
                 .IsRequired();
 
             builder.Property(x => x.QuantidadeTotal)
-                .HasColumnType("int(5)")
+                .HasColumnType("int")
                 .IsRequired();
 
             builder.Property(x => x.Local)
