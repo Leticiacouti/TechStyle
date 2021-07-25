@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace TechStyle.Dominio.Modelo
+﻿namespace TechStyle.Dominio.Modelo
 {
-    public class Estoque
+    public class Estoque : IEntity
     {
         public int Id { get; set; }
         public int QuantidadeMinima { get; set; }
@@ -10,17 +8,13 @@ namespace TechStyle.Dominio.Modelo
         public int QuantidadeLocal { get; set; }
         public int QuantidadeTotal { get; set; }
         public Produto Produto { get; set; }
-        public int ProdutoId { get; set; }
+        public int IdProduto { get; set; }
 
-        public void Cadastrar(Produto produto, int qtdMin, string local)
+        public void Cadastrar(int idProduto, int qtdMin, string local)
         {
-            if (produto != null)
-            {
-                Produto = produto;
-                Id = produto.Id;
-                QuantidadeMinima = qtdMin;
-                Local = local;
-            }
+            IdProduto = idProduto;
+            QuantidadeMinima = qtdMin;
+            Local = local;
         }
 
         public void AlterarLocal(string local)
@@ -33,11 +27,11 @@ namespace TechStyle.Dominio.Modelo
             QuantidadeMinima = (qtd <= 0) ? QuantidadeMinima : qtd;
         }
 
-        //TODO adicionar no estoque
+        // TODO: adicionar no estoque
 
         public override string ToString()
         {
             return Produto + " - " + QuantidadeLocal;
         }
-    } 
+    }
 }

@@ -2,10 +2,10 @@
 
 namespace TechStyle.Dominio.Modelo
 {
-    public class Produto
+    public class Produto : IEntity
     {
         public static int QuantidadeId { get; private set; }
-        public int Id { get; private set; }
+        public int Id { get; set; }
         public decimal ValorVenda { get; private set; }
         public string Nome { get; private set; }
         public string SKU { get; private set; }
@@ -21,32 +21,19 @@ namespace TechStyle.Dominio.Modelo
         public Loja Loja { get; set; }
         public bool Ativo { get; private set; }
 
-        public Produto()
-        {
-            Segmento = new Segmento();
-            //DetalheProduto = new DetalheProduto();
-        }
-
         public void Cadastrar(string nome, string material, string cor, string tamanho, string modelo, string marca,
-                              Segmento segmento, string sku, decimal valorVenda)
+                              int idSegmento, string sku, decimal valorVenda)
         {
-            // Criar lista de Ids 
-
-            if (segmento != null)
-            {
-                Segmento = segmento;
-                Id = QuantidadeId + 1;
-                QuantidadeId++;
-                ValorVenda = valorVenda;
-                Nome = nome;
-                SKU = sku;
-                Material = material;
-                Cor = cor;
-                Marca = marca;
-                Modelo = modelo;
-                Tamanho = tamanho;
-                Ativo = false;
-            }
+            ValorVenda = valorVenda;
+            Nome = nome;
+            SKU = sku;
+            Material = material;
+            Cor = cor;
+            Marca = marca;
+            Modelo = modelo;
+            Tamanho = tamanho;
+            IdSegmento = idSegmento;
+            Ativo = false;
         }
 
         public void AlterarItemProduto(string nome, string material, string cor, string tamanho,
@@ -63,7 +50,7 @@ namespace TechStyle.Dominio.Modelo
             ValorVenda = (valorVenda <= 0) ? ValorVenda : valorVenda;
         }
 
-        // Incluir alterar status
+        // TODO: Incluir alterar status
 
         public void AlterarValorVenda(decimal valor)
         {
@@ -72,7 +59,7 @@ namespace TechStyle.Dominio.Modelo
 
         public override string ToString()
         {
-            return Id + " - " + Nome + ", " + ValorVenda;
+            return Id + " - " + Nome + ", " + ValorVenda.ToString("F2");
         }
     }
 }

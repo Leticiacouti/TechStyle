@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using TechStyle.Dados.Map;
 using TechStyle.Dominio.Modelo;
 

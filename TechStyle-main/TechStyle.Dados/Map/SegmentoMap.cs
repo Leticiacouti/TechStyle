@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dados.Map
@@ -13,7 +8,7 @@ namespace TechStyle.Dados.Map
     {
         public void Configure(EntityTypeBuilder<Segmento> builder)
         {
-            builder.ToTable("Segmento"); //Aqui damos nome para a tabela
+            builder.ToTable("Segmento"); 
 
             builder.HasKey(x => x.Id); 
             
@@ -24,7 +19,6 @@ namespace TechStyle.Dados.Map
             builder.Property(x => x.SubCategoria)
                 .HasColumnType("varchar(100)")
                 .IsRequired();
-            // throw new NotImplementedException(); -> apagar
 
             builder.HasMany<Produto>(p => p.Produtos)
                 .WithOne(s => s.Segmento)

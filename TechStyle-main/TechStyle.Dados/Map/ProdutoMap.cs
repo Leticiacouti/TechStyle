@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dados.Map
@@ -46,7 +41,7 @@ namespace TechStyle.Dados.Map
                 .IsRequired();
 
             builder.Property(x => x.ValorVenda)
-                .HasColumnType("decimal(10,3)") // 10 representa o max de digitos, 3 a qtd de num pos virgula
+                .HasColumnType("decimal(10,3)") 
                 .IsRequired();
 
             builder.HasMany<PedidoDeVenda>(p => p.PedidoDeVenda)

@@ -4,15 +4,8 @@ using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dados.Repositorio
 {
-    public class SegmentoRepositorio
+    public class SegmentoRepositorio : BaseRepositorio<Segmento>
     {
-        private readonly Contexto contexto;
-
-        public SegmentoRepositorio()
-        {
-            contexto = new Contexto();
-        }
-
         public bool Incluir(string categoria, string subcategoria)
         {
             var segmento = new Segmento();
@@ -21,32 +14,29 @@ namespace TechStyle.Dados.Repositorio
             if (Existe(segmento))
                 return false;
 
-            contexto.Segmento.Add(segmento);
-            contexto.SaveChanges();
-            return true;
+            return base.Incluir(segmento);
         }
 
         public bool Alterar(int id, string categoria, string subcategoria)
         {
             var segmentoEncontrado = SelecionarPorId(id);
-            //var segmento = new Segmento();
-            //segmento.Cadastrar(listaDeSegmentos.Count + 1, categoria, subcategoria);
-
+     
             if (!Existe(segmentoEncontrado) || ExisteAlteracao(categoria, subcategoria))
             {
                 return false;
             }
 
             segmentoEncontrado.Alterar(categoria, subcategoria);
-            contexto.Segmento.Update(segmentoEncontrado);
-            contexto.SaveChanges();
-            return true;
+
+            return base.Alterar(segmentoEncontrado);
         }
 
-
-        public Segmento SelecionarPorId(int id)
+        public void AlterarStatus(int id)
         {
-            return contexto.Segmento.FirstOrDefault(x => x.Id == id);
+            var segmentoEncontrado = SelecionarPorId(id);
+
+            segmentoEncontrado.AlterarStatus(!segmentoEncontrado.Ativo);
+            base.Alterar(segmentoEncontrado);
         }
 
         public List<Segmento> SelecionarPorCategoria(string categoria)
@@ -54,9 +44,9 @@ namespace TechStyle.Dados.Repositorio
             return contexto.Segmento.Where(x => x.Categoria.ToUpper() == categoria.Trim().ToUpper()).ToList();
         }
 
-        public List<Segmento> SelecionarTudo()
+        public override List<Segmento> SelecionarTudo()
         {
-            return contexto.Segmento.OrderBy(x => x.Categoria).ToList();
+            return base.SelecionarTudo().OrderBy(x => x.Categoria).ToList();
         }
 
         public bool Existe(Segmento segmento)

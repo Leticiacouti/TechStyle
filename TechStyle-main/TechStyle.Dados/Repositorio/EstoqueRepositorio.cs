@@ -1,30 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TechStyle.Dados.Repositorio;
 using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dominio.Repositorio
 {
-    public class EstoqueRepositorio
+    public class EstoqueRepositorio : BaseRepositorio<Estoque>
     {
-        public List<Estoque> listaEstoque;
-        public EstoqueRepositorio()
-        {
-            listaEstoque = new List<Estoque>();
-        }
-
+      
         public bool Incluir(Produto produto, int qtdMinima, string local)
         {
             var estoque = new Estoque();
-            estoque.Cadastrar(produto, qtdMinima, local);
+            estoque.Cadastrar(produto.Id, qtdMinima, local);
 
             if (Existe(estoque))
                 return false;
 
-            listaEstoque.Add(estoque);
-            return true;
+            return base.Incluir(estoque);
         }
 
         public bool AlterarLocal(int id, string local)
@@ -42,11 +34,6 @@ namespace TechStyle.Dominio.Repositorio
             estoqueEncontrado.AlterarQuantidadeMinima(qtdMin);
         }
 
-        public Estoque SelecionarPorId(int id)
-        {
-            return listaEstoque.FirstOrDefault(x => x.Id == id);
-        }
-
         //Filtro para os itens do produto
         //public List<Segmento> SelecionarPorNome(string nome)
         //{
@@ -55,12 +42,12 @@ namespace TechStyle.Dominio.Repositorio
 
         public List<Estoque> SelecionarTudo()
         {
-            return listaEstoque.OrderBy(x => x.Id).ToList();
+            return contexto.Estoque.OrderBy(x => x.Id).ToList();
         }
 
         public bool Existe(Estoque estoque)
         {
-            return listaEstoque.Any(x => x.Produto == estoque.Produto);
+            return contexto.Estoque.Any(x => x.Produto == estoque.Produto);
         }
 
         

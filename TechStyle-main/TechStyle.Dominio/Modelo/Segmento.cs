@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace TechStyle.Dominio.Modelo
 {
-    public class Segmento
+    public class Segmento : IEntity
     {
         public static int QuantidadeId { get; set; }
         public int Id { get; set; }
@@ -20,7 +19,7 @@ namespace TechStyle.Dominio.Modelo
             Ativo = true;
         }
 
-       public void Alterar(string categoria, string subCategoria)
+        public void Alterar(string categoria, string subCategoria)
         {
             Categoria = string.IsNullOrEmpty(categoria.Trim()) ? Categoria : categoria;
             SubCategoria = string.IsNullOrEmpty(subCategoria.Trim()) ? SubCategoria : subCategoria;

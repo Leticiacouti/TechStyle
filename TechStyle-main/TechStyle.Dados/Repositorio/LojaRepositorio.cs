@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using TechStyle.Dominio.Modelo;
 
-namespace TechStyle.Dominio.Repositorio
+namespace TechStyle.Dados.Repositorio
 {
-    public class LojaRepositorio
+    public class LojaRepositorio : BaseRepositorio<Loja>
     {
-        public List<Loja> ListaLoja = new List<Loja>();
-
         public bool Incluir(Produto produto, int qtdMinima)
         {
             var loja = new Loja();
@@ -19,18 +13,18 @@ namespace TechStyle.Dominio.Repositorio
             if (Existe(loja))
                 return false;
 
-            ListaLoja.Add(loja);
+            base.Incluir(loja);
             return true;
         }
 
         public Loja SelecionarPorId(int id)
         {
-            return ListaLoja.FirstOrDefault(x => x.Id == id);
+            return contexto.Loja.FirstOrDefault(x => x.Id == id);
         }
 
         public bool Existe(Loja loja)
         {
-            return ListaLoja.Any(x => x.Produto == loja.Produto);
+            return contexto.Loja.Any(x => x.Produto == loja.Produto);
         }
     }
 }
