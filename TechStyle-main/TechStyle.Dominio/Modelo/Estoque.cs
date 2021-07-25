@@ -31,7 +31,7 @@
 
         public override string ToString()
         {
-            return Produto + " - " + QuantidadeLocal;
+            return Produto + " - " + "Quantidade no estoque: "+ QuantidadeLocal + "Localizado em: " + Local;
         }
     }
 }

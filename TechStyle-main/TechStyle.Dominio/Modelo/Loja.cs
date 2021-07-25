@@ -8,24 +8,18 @@
         public int QuantidadeLocal { get; set; }
         public int QuantidadeMinima { get; set; }
 
-        public void Cadastrar(Produto produto, int qtdMin)
+        public void Cadastrar(int idProduto, int qtdMin)
         {
-            Id = produto.Id;
-            Produto = produto;
+            IdProduto = idProduto;
             QuantidadeLocal = 0;
             QuantidadeMinima = qtdMin;
         }
 
         public bool AdicionarNaLoja(int qtd, Estoque estoque)
         {
-            if (estoque.Id == Id)
-            {
                 QuantidadeLocal += qtd;
                 estoque.QuantidadeLocal -= qtd;
                 return true;
-            }
-            else
-                return false;
         }
     }
 }

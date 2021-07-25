@@ -4,7 +4,6 @@ namespace TechStyle.Dominio.Modelo
 {
     public class Produto : IEntity
     {
-        public static int QuantidadeId { get; private set; }
         public int Id { get; set; }
         public decimal ValorVenda { get; private set; }
         public string Nome { get; private set; }

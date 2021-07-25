@@ -12,6 +12,7 @@ namespace TechStyle.UI
             SegmentoRepositorio segRep = new();
             ProdutoRepositorio produtoRep = new();
             EstoqueRepositorio estoqueRep = new();
+            LojaRepositorio lojaRep = new();
             Menu();
             string opcao = Console.ReadLine().ToUpper();
 
@@ -19,6 +20,7 @@ namespace TechStyle.UI
             {
                 switch (opcao)
                 {
+
                     #region Cadastrar Segmento
                     case "1":
                         Console.WriteLine("Digite 1 para cadastro automatico ou 2 para cadastrar manualmente");
@@ -161,7 +163,7 @@ namespace TechStyle.UI
                         Console.Write("Digite o id do segmento: ");
                         int idSegmento = int.Parse(Console.ReadLine());
                         Segmento segmento = segRep.SelecionarPorId(idSegmento);
-                        
+
                         produtoRep.Alterar(produtoId, nNome, nMaterial, nCor, nTamanho, nModelo, nMarca, segmento, nSku, nValor);
 
                         Console.WriteLine("\nlista de produtos atualizada: ");
@@ -197,12 +199,12 @@ namespace TechStyle.UI
                         break;
                     #endregion
 
-                    #region cadastrar estoque
+                    #region cadastrar produto no estoque
                     case "10":
                         Console.Clear();
                         Console.WriteLine("Digite o Id do produto que voce deseja cadastrar no estoque: ");
-                        int produto_Id = int.Parse(Console.ReadLine());
-                        Produto p1 = produtoRep.SelecionarPorId(produto_Id);
+                        produtoId = int.Parse(Console.ReadLine());
+                        Produto p1 = produtoRep.SelecionarPorId(produtoId);
                         estoqueRep.Incluir(p1, 50, "Prateleira 1");
                         break;
                     #endregion
@@ -217,14 +219,78 @@ namespace TechStyle.UI
                         break;
                     #endregion
 
-                    //#region cadastrar loja
-                    //case "11":
+                    #region Alterar local de estocagem ou qtd minima
+                    case "12":
+                        Console.Clear();
+                        Console.Write("Digite 1 para alterar local de estocagem ou 2 para alterar qtd minima em estoque: ");
+                        int opcaoEstoque = int.Parse(Console.ReadLine());
 
-                    //    break;
-                    //#endregion
+                        if (opcaoEstoque == 1)
+                        {
+                            Console.Write("\nDigite o id do estoque que deseja alterar seu local de armazenagem: ");
+                            int estoqueId = int.Parse(Console.ReadLine());
+
+                            Console.WriteLine("\nQual o novo local de armazenagem? ");
+                            string novoLocal = Console.ReadLine();
+
+                            estoqueRep.AlterarLocal(estoqueId, novoLocal);
+
+                            Console.WriteLine("Local de armazenagem alterado!");
+                        }
+                        else if (opcaoEstoque == 2)
+                        {
+                            Console.Write("\nDigite o id do estoque que deseja alterar sua qtd minima: ");
+                            int estoqueId = int.Parse(Console.ReadLine());
+
+                            Console.WriteLine("\nQual a nova qtd minima? ");
+                            int novoQtdMin = int.Parse(Console.ReadLine());
+
+                            estoqueRep.AlterarQtdMinima(estoqueId, novoQtdMin);
+
+                            Console.WriteLine("Quantidade minima alterada!");
+                        }
+                        break;
+                    #endregion
+
+                    #region cadastrar loja
+                    case "13":
+                        Console.Clear();
+                        Console.WriteLine("Digite o Id do produto que voce deseja cadastrar na loja: ");
+                        produtoId = int.Parse(Console.ReadLine());
+                        p1 = produtoRep.SelecionarPorId(produtoId);
+                        lojaRep.Incluir(p1, 20);
+                        break;
+                    #endregion
+
+                    #region Listar loja
+                    case "14":
+                        Console.WriteLine("Loja: ");
+                        foreach (Loja x in lojaRep.SelecionarTudo())
+                        {
+                            Console.WriteLine(x);
+                        }
+                        break;
+                    #endregion
+
+                    #region Transferir para loja
+                    case "15":
+                        Console.Clear();
+                        Console.WriteLine("digite o id da loja que voce deseja transferir o produto: ");
+                        int idLoja = int.Parse(Console.ReadLine());
+
+                        Loja procuraLoja = lojaRep.SelecionarPorId(idLoja);
+                        Estoque procuraEstoque = estoqueRep.SelecionarPorProduto(procuraLoja.Produto);
+
+                        lojaRep.TransferirParaLoja(idLoja, procuraEstoque, 10);
+
+                        Console.WriteLine($"\nAgora tem {procuraLoja.QuantidadeLocal} na loja e {procuraEstoque.QuantidadeLocal} no estoque");
+                        break;
+                    #endregion
+
                     case "C":
                         Console.Clear();
                         break;
+
                 }
                 Console.WriteLine();
                 Menu();
@@ -247,9 +313,13 @@ namespace TechStyle.UI
                               //"\n9 - para desabilitar produto" +
                               "\n10 - cadastrar item no estoque" +
                               "\n11 - visualizar estoque" +
+                              "\n12 - alterar qtd minima em estoque e localização" +
+                              "\n13 - cadastrar produto na loja" +
+                              "\n14 - verificar produtos na loja" +
+                              "\n15 - trasnferir itens para loja" +
                               "\nC - para limpar a tela" +
                               "\nX - para sair");
         }
     }
-    }
+}
 
