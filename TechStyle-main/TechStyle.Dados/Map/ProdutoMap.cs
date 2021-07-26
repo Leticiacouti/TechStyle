@@ -41,7 +41,7 @@ namespace TechStyle.Dados.Map
                 .IsRequired();
 
             builder.Property(x => x.ValorVenda)
-                .HasColumnType("decimal(10,3)") 
+                .HasColumnType("decimal(10,2)") 
                 .IsRequired();
 
             builder.HasMany<PedidoDeVenda>(p => p.PedidoDeVenda)

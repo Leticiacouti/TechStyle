@@ -25,7 +25,7 @@ namespace TechStyle.Dados
             modelBuilder.ApplyConfiguration(new ProdutoMap());
             modelBuilder.ApplyConfiguration(new EstoqueMap());
             modelBuilder.ApplyConfiguration(new LojaMap());
-            modelBuilder.ApplyConfiguration(new VendasMap());
+            modelBuilder.ApplyConfiguration(new VendaMap());
             modelBuilder.ApplyConfiguration(new PedidoDeVendaMap());
             base.OnModelCreating(modelBuilder);
         }

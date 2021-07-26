@@ -9,9 +9,15 @@ namespace TechStyle.Dados.Map
         public void Configure(EntityTypeBuilder<PedidoDeVenda> builder)
         {
             builder.ToTable("Pedido de vendas");
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => new { x.Id, x.IdVenda });
 
-            builder.Property(x => x.Quantidade).HasColumnType("int").IsRequired();
+            builder.Property(x => x.Quantidade)
+                   .HasColumnType("int")
+                   .IsRequired();
+
+            builder.HasOne<Produto>(p => p.Produto)
+                   .WithMany(x => x.PedidoDeVenda)
+                   .HasForeignKey<PedidoDeVenda>(i => i.IdProduto);
         }
     }
 }

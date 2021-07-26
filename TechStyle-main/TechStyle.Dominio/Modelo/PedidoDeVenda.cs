@@ -5,9 +5,16 @@
         public int Id { get; set; }
         public Produto Produto { get; set; }
         public Venda Venda { get; set; }
-        public int IdVendas { get; set; }
+        public int IdVenda { get; set; }
         public int IdProduto { get; set; }
         public int Quantidade { get; set; }
+
+        public void Cadastrar(int quantidade, int idProduto, int idVenda)
+        {
+            Quantidade = quantidade;
+            IdProduto = idProduto;
+            IdVenda = idVenda;
+        }
 
         public decimal SubTotal()
         {

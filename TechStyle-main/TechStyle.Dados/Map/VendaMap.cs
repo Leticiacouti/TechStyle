@@ -4,7 +4,7 @@ using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dados.Map
 {
-    class VendasMap : IEntityTypeConfiguration<Venda>
+    class VendaMap : IEntityTypeConfiguration<Venda>
     {
         
         public void Configure(EntityTypeBuilder<Venda> builder)
@@ -17,7 +17,7 @@ namespace TechStyle.Dados.Map
                 .HasColumnType("decimal(5,2)")
                 .IsRequired();
 
-            builder.HasMany<PedidoDeVenda>(p => p.PedidoDeVendas)
+            builder.HasMany<PedidoDeVenda>(p => p.PedidoDeVenda)
                 .WithOne(x => x.Venda)
                 .HasForeignKey(i => i.Id);
         }

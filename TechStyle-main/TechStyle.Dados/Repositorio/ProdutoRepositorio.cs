@@ -48,12 +48,6 @@ namespace TechStyle.Dados.Repositorio
                 return false;
         }
 
-        //Filtro para os itens do produto
-        //public List<Segmento> SelecionarPorNome(string nome)
-        //{
-        //    return listaDeSegmentos.Where(x => x.Categoria.ToUpper() == categoria.Trim().ToUpper()).ToList();
-        //}
-
         public List<Produto> SelecionarTudo()
         {
             return contexto.Produto.OrderBy(x => x.Id).ToList();
