@@ -17,7 +17,7 @@ namespace TechStyle.Dados.Map
 
             builder.HasOne<Produto>(p => p.Produto)
                    .WithMany(x => x.PedidoDeVenda)
-                   .HasForeignKey<PedidoDeVenda>(i => i.IdProduto);
+                   .HasForeignKey(i => i.IdProduto);
         }
     }
 }

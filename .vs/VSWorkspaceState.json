@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\TechStyle-main",
-    "\\TechStyle-main\\TechStyle.Dados",
-    "\\TechStyle-main\\TechStyle.Dominio",
-    "\\TechStyle-main\\TechStyle.Dominio\\Modelo"
+    ""
   ],
-  "SelectedNode": "\\TechStyle-main\\TechStyle.sln",
+  "SelectedNode": "\\TechStyle.sln",
   "PreviewInSolutionExplorer": false
 }
