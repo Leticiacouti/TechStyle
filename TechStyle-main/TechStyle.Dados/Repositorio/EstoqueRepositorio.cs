@@ -8,8 +8,7 @@ namespace TechStyle.Dominio.Repositorio
 {
     public class EstoqueRepositorio : BaseRepositorio<Estoque>
     {
-        
-
+       
         public bool Incluir(Produto produto, int qtdMinima, string local)
         {
             var estoque = new Estoque();

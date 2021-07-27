@@ -15,7 +15,7 @@ namespace TechStyle.Dados.Map
                    .HasColumnType("int")
                    .IsRequired();
 
-            builder.HasOne<Produto>(p => p.Produto)
+            builder.HasMany<Produto>(p => p.Produto)
                    .WithMany(x => x.PedidoDeVenda)
                    .HasForeignKey(i => i.IdProduto);
         }
