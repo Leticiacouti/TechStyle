@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj": {}
+    "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj": {}
   },
   "projects": {
-    "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj": {
+    "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj",
         "projectName": "TechStyle.UI",
-        "projectPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj",
+        "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Console\\TechStyle.UI.csproj",
         "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
-        "outputPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Console\\obj\\",
+        "outputPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,11 +34,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
-                "projectPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj"
+              "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
+                "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj"
               },
-              "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
-                "projectPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
+              "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
               }
             }
           }
@@ -71,14 +71,14 @@
         }
       }
     },
-    "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
+    "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
+        "projectUniqueName": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
         "projectName": "TechStyle.Dados",
-        "projectPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
+        "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
         "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
-        "outputPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dados\\obj\\",
+        "outputPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -101,8 +101,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
-                "projectPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
+              "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
               }
             }
           }
@@ -147,14 +147,14 @@
         }
       }
     },
-    "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+    "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
         "projectName": "TechStyle.Dominio",
-        "projectPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+        "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
         "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
-        "outputPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

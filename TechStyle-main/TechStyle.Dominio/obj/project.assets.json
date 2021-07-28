@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
       "projectName": "TechStyle.Dominio",
-      "projectPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+      "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
       "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
-      "outputPath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\obj\\",
+      "outputPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8YyXjIHUlT2Q/D9O0XlTcaToK4X9iKGVMLMrxuQ1hi3vXqYCEbfoLZWVKTbAcUOkteLVA3/F8hIM8FqOl+SMdQ==",
+  "dgSpecHash": "QFyjnU1fmD3P53PDhP9U4fk8KK5fCwuNirRJ7tfR8EhWMwETNsBzRh7aQvfus4VSm5ESUfC6l4/n8RfFllvZKQ==",
   "success": true,
-  "projectFilePath": "D:\\Leticia\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
+  "projectFilePath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Leleh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Leleh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
