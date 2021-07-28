@@ -8,9 +8,9 @@ namespace TechStyle.Dados.Map
     {
         public void Configure(EntityTypeBuilder<Produto> builder)
         {
-            builder.ToTable("Produto"); 
+            builder.ToTable("Produto");
 
-            builder.HasKey(x => x.Id); 
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Nome)
                 .HasColumnType("varchar(100)")
@@ -41,12 +41,8 @@ namespace TechStyle.Dados.Map
                 .IsRequired();
 
             builder.Property(x => x.ValorVenda)
-                .HasColumnType("decimal(10,2)") 
+                .HasColumnType("decimal(10,2)")
                 .IsRequired();
-
-            builder.HasMany<PedidoDeVenda>(p => p.PedidoDeVenda)
-                .WithOne(s => s.Produto)
-                .HasForeignKey(i => i.IdProduto);
         }
     }
 }

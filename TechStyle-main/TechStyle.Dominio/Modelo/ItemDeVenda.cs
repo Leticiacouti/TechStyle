@@ -1,11 +1,11 @@
 ﻿namespace TechStyle.Dominio.Modelo
 {
-    public class PedidoDeVenda : IEntity
+    public class ItemDeVenda : IEntity
     {
         public int Id { get; set; }
         public Produto Produto { get; set; }
-        public Venda Venda { get; set; }
-        public int IdVenda { get; set; }
+        public Vendas Vendas { get; set; }
+        public int IdVendas { get; set; }
         public int IdProduto { get; set; }
         public int Quantidade { get; set; }
 
@@ -13,13 +13,12 @@
         {
             Quantidade = quantidade;
             IdProduto = idProduto;
-            IdVenda = idVenda;
+            IdVendas = idVenda;
         }
 
-        public decimal SubTotal()
+        public override string ToString()
         {
-            decimal valor = Produto.ValorVenda * Quantidade;
-            return valor;
+            return Id + "RD" + Quantidade;
         }
     }
 }

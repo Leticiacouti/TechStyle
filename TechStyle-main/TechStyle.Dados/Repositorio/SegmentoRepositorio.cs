@@ -20,13 +20,13 @@ namespace TechStyle.Dados.Repositorio
         public bool Alterar(int id, string categoria, string subcategoria)
         {
             var segmentoEncontrado = SelecionarPorId(id);
-     
+
             if (!Existe(segmentoEncontrado) || ExisteAlteracao(categoria, subcategoria))
             {
                 return false;
             }
 
-            segmentoEncontrado.Alterar(categoria, subcategoria);
+            segmentoEncontrado.Alterar(id, categoria, subcategoria);
 
             return base.Alterar(segmentoEncontrado);
         }

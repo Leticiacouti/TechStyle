@@ -6,16 +6,16 @@ namespace TechStyle.Dados
 {
     public class Contexto : DbContext
     {
-        public DbSet<Segmento> Segmento { get; set; } 
+        public DbSet<Segmento> Segmento { get; set; }
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Estoque> Estoque { get; set; }
         public DbSet<Loja> Loja { get; set; }
-        public DbSet<Venda> Venda { get; set; }
-        public DbSet<PedidoDeVenda> PedidoDeVenda { get; set; }
+        public DbSet<Vendas> Vendas { get; set; }
+        public DbSet<ItemDeVenda> ItemDeVenda { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-R9JFMSC\\SQLEXPRESS; Database=TechStyle; Trusted_Connection=True");
+            optionsBuilder.UseSqlServer("Server=; Database=TechStyle; Trusted_Connection=True");
             base.OnConfiguring(optionsBuilder);
         }
 
@@ -25,10 +25,9 @@ namespace TechStyle.Dados
             modelBuilder.ApplyConfiguration(new ProdutoMap());
             modelBuilder.ApplyConfiguration(new EstoqueMap());
             modelBuilder.ApplyConfiguration(new LojaMap());
-            modelBuilder.ApplyConfiguration(new VendaMap());
-            modelBuilder.ApplyConfiguration(new PedidoDeVendaMap());
+            modelBuilder.ApplyConfiguration(new VendasMap());
+            modelBuilder.ApplyConfiguration(new ItemDeVendaMap());
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }

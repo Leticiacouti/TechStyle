@@ -15,7 +15,8 @@ namespace TechStyle.UI
             EstoqueRepositorio estoqueRep = new();
             LojaRepositorio lojaRep = new();
 
-            PedidoDeVendasRepositorio pedidoRep = new();
+            ItemDeVendasRepositorio pedidoRep = new();
+            VendasRepositorio vendaRep = new();
 
             Console.WriteLine("Digite 1 para parte de estocagem ou 2 para parte de vendas");
             string opcaoPrincipal = Console.ReadLine();
@@ -168,7 +169,7 @@ namespace TechStyle.UI
                             Console.Write("Digite o tamanho: ");
                             string nTamanho = Console.ReadLine();
                             Console.Write("Digite o valor: ");
-                            decimal nValor = decimal.Parse(Console.ReadLine());
+                            decimal nValor = decimal.Parse(Console.ReadLine()); // TODO: arrumar, nao recebe valor nulo
                             Console.Write("Digite o id do segmento: ");
                             int idSegmento = int.Parse(Console.ReadLine());
                             Segmento segmento = segRep.SelecionarPorId(idSegmento);
@@ -307,15 +308,15 @@ namespace TechStyle.UI
                 }
             }
 
-            else if (opcaoPrincipal =="2")
+            else if (opcaoPrincipal == "2")
             {
-                Venda venda = new();
+                Vendas venda = new();
                 Console.Write("Quantos itens diferentes foram colocados no carrinho? ");
                 int quantidadeItens = int.Parse(Console.ReadLine());
 
                 for (int i = 0; i < quantidadeItens; i++)
                 {
-                    Console.Write($"Digite o Id do {i+1}º produto: ");
+                    Console.Write($"Digite o Id do {i + 1}º produto: ");
                     int idProduto = int.Parse(Console.ReadLine());
                     Console.Write("Qual a quantidade desse item o cliente irá levar? ");
                     int qtdProduto = int.Parse(Console.ReadLine());
@@ -325,10 +326,15 @@ namespace TechStyle.UI
                     pedidoRep.Incluir(p1, qtdProduto, venda);
                 }
 
-                foreach(PedidoDeVenda pedido in pedidoRep.SelecionarPorVenda(venda.Id))
-                {
-                    venda.PedidoDeVenda.Add(pedido);
-                }
+                //foreach(PedidoDeVenda pedido in pedidoRep.SelecionarPorVenda(venda.Id))
+                //{
+                //    venda.PedidoDeVenda.Add(pedido);//teste
+                //    venda.ValorTotal += pedido.SubTotal();
+                //    Console.WriteLine(pedido);
+                //}
+
+                vendaRep.Incluir(venda);
+
             }
 
         }

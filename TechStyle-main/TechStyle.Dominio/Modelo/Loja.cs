@@ -17,9 +17,9 @@
 
         public bool AdicionarNaLoja(int qtd, Estoque estoque)
         {
-                QuantidadeLocal += qtd;
-                estoque.QuantidadeLocal -= qtd;
-                return true;
+            QuantidadeLocal += qtd;
+            estoque.QuantidadeLocal -= qtd;
+            return true;
         }
     }
 }

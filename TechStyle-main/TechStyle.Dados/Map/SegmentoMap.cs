@@ -8,13 +8,13 @@ namespace TechStyle.Dados.Map
     {
         public void Configure(EntityTypeBuilder<Segmento> builder)
         {
-            builder.ToTable("Segmento"); 
+            builder.ToTable("Segmento");
 
-            builder.HasKey(x => x.Id); 
-            
+            builder.HasKey(x => x.Id);
+
             builder.Property(x => x.Categoria)
                 .HasColumnType("varchar(100)")
-                .IsRequired(); 
+                .IsRequired();
 
             builder.Property(x => x.SubCategoria)
                 .HasColumnType("varchar(100)")

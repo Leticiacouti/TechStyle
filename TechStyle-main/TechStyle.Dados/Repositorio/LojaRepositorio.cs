@@ -12,7 +12,7 @@ namespace TechStyle.Dados.Repositorio
         public LojaRepositorio()
         {
             _estoqueRepo = new();
-        }   
+        }
 
         public bool Incluir(Produto produto, int qtdMinima)
         {

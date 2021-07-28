@@ -19,8 +19,9 @@ namespace TechStyle.Dominio.Modelo
             Ativo = true;
         }
 
-        public void Alterar(string categoria, string subCategoria)
+        public void Alterar(int id, string categoria, string subCategoria)
         {
+            Id = id;
             Categoria = string.IsNullOrEmpty(categoria.Trim()) ? Categoria : categoria;
             SubCategoria = string.IsNullOrEmpty(subCategoria.Trim()) ? SubCategoria : subCategoria;
         }

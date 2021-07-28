@@ -8,9 +8,9 @@ namespace TechStyle.Dados.Map
     {
         public void Configure(EntityTypeBuilder<Estoque> builder)
         {
-            builder.ToTable("Estoque"); 
+            builder.ToTable("Estoque");
 
-            builder.HasKey(x => x.Id); 
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.QuantidadeMinima)
                 .HasColumnType("int")

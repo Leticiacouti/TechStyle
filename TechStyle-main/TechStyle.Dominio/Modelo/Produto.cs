@@ -5,7 +5,7 @@ namespace TechStyle.Dominio.Modelo
     public class Produto : IEntity
     {
         public int Id { get; set; }
-        public decimal ValorVenda { get; private set; }
+        public decimal ValorVenda { get; set; }
         public string Nome { get; private set; }
         public string SKU { get; private set; }
         public int IdSegmento { get; set; }
@@ -15,7 +15,7 @@ namespace TechStyle.Dominio.Modelo
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Tamanho { get; set; }
-        public List<PedidoDeVenda> PedidoDeVenda { get; set; }
+        public List<ItemDeVenda> ItemDeVenda { get; set; }
         public Estoque Estoque { get; set; }
         public Loja Loja { get; set; }
         public bool Ativo { get; private set; }

@@ -14,16 +14,16 @@ namespace TechStyle.Dados.Repositorio
 
             if (Existe(produto))
                 return false;
-            
+
             return base.Incluir(produto);
         }
 
-        public bool Alterar(int id, string nome, string material, string cor, string tamanho, string modelo, 
+        public bool Alterar(int id, string nome, string material, string cor, string tamanho, string modelo,
                             string marca, Segmento segmento, string sku, decimal valorVenda)
         {
             var produtoEncontrado = SelecionarPorId(id);
             Produto produtoNovo = new();
-            produtoNovo.Cadastrar(nome, material, cor, tamanho,modelo,marca,segmento.Id,sku,valorVenda);
+            produtoNovo.Cadastrar(nome, material, cor, tamanho, modelo, marca, segmento.Id, sku, valorVenda);
 
             if (!Existe(produtoNovo))
             {
@@ -35,7 +35,7 @@ namespace TechStyle.Dados.Repositorio
         }
 
         public bool AlterarValorVenda(int id, decimal valor)
-        {        
+        {
             var produtoEncontrado = SelecionarPorId(id);
 
             if (produtoEncontrado != null)
