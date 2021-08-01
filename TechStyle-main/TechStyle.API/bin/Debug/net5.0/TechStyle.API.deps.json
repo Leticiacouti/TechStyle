@@ -1351,6 +1351,7 @@
       },
       "TechStyle.Dados/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
           "TechStyle.Dominio": "1.0.0",
           "UmbracoCms.Core": "8.15.1"

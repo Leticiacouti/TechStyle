@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "TechStyle.Dados/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.8",
           "TechStyle.Dominio": "1.0.0",

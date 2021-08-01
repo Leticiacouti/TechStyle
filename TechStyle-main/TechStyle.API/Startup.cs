@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -34,24 +33,23 @@ namespace TechStyle.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers().AddNewtonsoftJson(Options => Options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TechStyle.API", Version = "v1" });
             });
-
             services.AddDbContext<Contexto>(
                 options => options.UseSqlServer
                 ("Server=DESKTOP-8TTJRTN;Database=TechStyle;Trusted_Connection=True;MultipleActiveResultSets=true"));
 
             services.AddScoped<IBibliotecaRepositorio, BibliotecaRepositorio>();
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
-            services.AddScoped<IEstoqueRepositorio, EstoqueRepositorio>();
+            services.AddScoped<ISegmentoRepositorio, SegmentoRepositorio>();
             services.AddScoped<IEstoqueRepositorio, EstoqueRepositorio>();
             services.AddScoped<IVendasRepositorio, VendasRepositorio>();
             services.AddScoped<IItemDeVendaRepositorio, ItemDeVendaRepositorio>();
             services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<ISegmentoService, SegmentoService>();
             services.AddScoped<IEstoqueService, EstoqueService>();
             services.AddScoped<IVendasService, VendasService>();
         }
@@ -65,8 +63,6 @@ namespace TechStyle.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TechStyle.API v1"));
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
