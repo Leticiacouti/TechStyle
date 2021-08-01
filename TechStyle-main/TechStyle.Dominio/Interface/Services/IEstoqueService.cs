@@ -15,6 +15,6 @@ namespace TechStyle.Dominio.Interface.Services
         bool AlterarQuantidadeMinima(int idEstoque, double valor);
         List<Estoque> SelecionarTudo();
         Estoque SelecionarPorId(int id);
-        void SomarEstoque(int id, int quant); //todo adicionei
+        void SomarEstoque(int id, int quant);
     }
 }

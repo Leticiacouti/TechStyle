@@ -11,8 +11,6 @@ namespace TechStyle.Dominio.DTO
         public int QuantidadeMin { get; set; }
         public string Local { get; set; }
         public int Quantidade { get; set; }
-        //todo retirar produto, utilizavel somente id
-        //public Produto Produto { get; set; }
         public int IdProduto { get; set; }
 
     }

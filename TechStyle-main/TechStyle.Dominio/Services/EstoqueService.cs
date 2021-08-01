@@ -40,7 +40,7 @@ namespace TechStyle.Dominio.Services
             }
         }
 
-        public bool AlterarLocal(int idEstoque, string local) //TODO alterei o dto por local
+        public bool AlterarLocal(int idEstoque, string local) 
         {
             Estoque estoque = _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(idEstoque);
 
@@ -55,7 +55,7 @@ namespace TechStyle.Dominio.Services
             }
         }
 
-        public bool AlterarQuantidadeMinima(int idEstoque, double valor) // TODO alterei dto por double
+        public bool AlterarQuantidadeMinima(int idEstoque, double valor) 
         {
             Estoque estoque = _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(idEstoque);
 
@@ -80,7 +80,6 @@ namespace TechStyle.Dominio.Services
             return _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(id);
         }
 
-        //TODO adicionei para nao deixar estoque zerado
         public void SomarEstoque(int id, int quant)
         {
             Estoque estoque = _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(id);

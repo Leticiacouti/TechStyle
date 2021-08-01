@@ -35,7 +35,7 @@ namespace TechStyle.Dados.Repositorio
         {
             return contexto.Venda.Include(x => x.ItemDeVenda)
                                  .ThenInclude(p => p.Produto)
-                                 .FirstOrDefault(i => i.Id == id); //todo inclui metodo para retornar os produtos
+                                 .FirstOrDefault(i => i.Id == id); 
         }
     }
 }
