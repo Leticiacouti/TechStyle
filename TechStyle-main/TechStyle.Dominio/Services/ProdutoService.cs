@@ -37,7 +37,7 @@ namespace TechStyle.Dominio.Services
                 produto.Modelo = dto.Modelo;
                 produto.SKU = dto.SKU;
                 produto.Tamanho = dto.Tamanho;
-                produto.Segmento = dto.Segmento;
+                produto.IdSegmento = dto.IdSegmento; //TODO alterar segmento por idsegmento
                 produto.Status = false;
                 _bibliotecaRepositorio.ProdutoRepositorio.Incluir(produto);
                 return true;

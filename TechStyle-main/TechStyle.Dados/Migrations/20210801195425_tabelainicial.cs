@@ -2,7 +2,7 @@
 
 namespace TechStyle.Dados.Migrations
 {
-    public partial class BancoTechStyle : Migration
+    public partial class tabelainicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

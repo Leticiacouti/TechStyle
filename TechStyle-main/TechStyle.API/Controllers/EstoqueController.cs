@@ -48,17 +48,24 @@ namespace TechStyle.API.Controllers
         }
 
         [HttpPut("{id}/AlterarLocal")]
-        public IActionResult AlterarLocalProduto(int id, [FromQuery] EstoqueDTO dto)
+        public IActionResult AlterarLocalProduto(int id, [FromQuery] string local) //todo alterei parametros
         {
-            _estoqueService.AlterarLocal(id, dto);
+            _estoqueService.AlterarLocal(id, local);
             return Ok("Localidade do produto alterada");
         }
 
         [HttpPut("{id}/AlterarQuantidadeMinima")]
-        public IActionResult AlterarQuantidadeMinima(int id, [FromQuery] EstoqueDTO dto)
+        public IActionResult AlterarQuantidadeMinima(int id, [FromQuery] double valor)//todo alterei parametros
         {
-            _estoqueService.AlterarQuantidadeMinima(id, dto);
+            _estoqueService.AlterarQuantidadeMinima(id, valor);
             return Ok("Quantidade Minima em estoque alterada!");
+        }
+
+        [HttpPut("{id}/AdicionarNoEstoque")]
+        public IActionResult AdicionarEstoque(int id, [FromQuery] int quantidade)//todo criei metodo para somar estoque
+        {
+            _estoqueService.SomarEstoque(id, quantidade);
+            return Ok("Quantidade Adicionada no estoque!");
         }
     }
 }

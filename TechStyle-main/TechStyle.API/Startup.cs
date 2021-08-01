@@ -40,7 +40,7 @@ namespace TechStyle.API
             });
             services.AddDbContext<Contexto>(
                 options => options.UseSqlServer
-                ("Server=DESKTOP-8TTJRTN;Database=TechStyle;Trusted_Connection=True;MultipleActiveResultSets=true"));
+                ("Server=DESKTOP-R9JFMSC\\SQLEXPRESS;Database=TechStyle;Trusted_Connection=True;MultipleActiveResultSets=true"));
 
             services.AddScoped<IBibliotecaRepositorio, BibliotecaRepositorio>();
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();

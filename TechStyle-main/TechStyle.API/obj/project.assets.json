@@ -5707,28 +5707,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Leleh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Vini\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
+      "projectUniqueName": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
       "projectName": "TechStyle.API",
-      "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
-      "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.API\\obj\\",
+      "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
+      "packagesPath": "C:\\Users\\Vini\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Leleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vini\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5741,11 +5738,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
-              "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj"
+            "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
+              "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj"
             },
-            "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
+            "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
             }
           }
         }
@@ -5793,7 +5790,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -40,32 +40,32 @@ namespace TechStyle.Dominio.Services
             }
         }
 
-        public bool AlterarLocal(int idEstoque, EstoqueDTO dto)
+        public bool AlterarLocal(int idEstoque, string local) //TODO alterei o dto por local
         {
             Estoque estoque = _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(idEstoque);
 
-            if (string.IsNullOrEmpty(dto.Local.Trim()))
+            if (string.IsNullOrEmpty(local.Trim()))
             {
                 return false;
             }
             else
             {
-                estoque.Local = dto.Local;
+                estoque.Local = local;
                 return _bibliotecaRepositorio.EstoqueRepositorio.Alterar(estoque);
             }
         }
 
-        public bool AlterarQuantidadeMinima(int idEstoque, EstoqueDTO dto)
+        public bool AlterarQuantidadeMinima(int idEstoque, double valor) // TODO alterei dto por double
         {
             Estoque estoque = _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(idEstoque);
 
-            if (dto.QuantidadeMin <= 0)
+            if (valor <= 0)
             {
                 return false;
             }
             else
             {
-                estoque.QuantidadeMin = dto.QuantidadeMin;
+                estoque.QuantidadeMin = valor;
                 return _bibliotecaRepositorio.EstoqueRepositorio.Alterar(estoque);
             }
         }
@@ -78,6 +78,14 @@ namespace TechStyle.Dominio.Services
         public Estoque SelecionarPorId(int id)
         {
             return _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(id);
+        }
+
+        //TODO adicionei para nao deixar estoque zerado
+        public void SomarEstoque(int id, int quant)
+        {
+            Estoque estoque = _bibliotecaRepositorio.EstoqueRepositorio.SelecionarPorId(id);
+            estoque.Quantidade += quant;
+            _bibliotecaRepositorio.EstoqueRepositorio.Alterar(estoque);
         }
     }
 }

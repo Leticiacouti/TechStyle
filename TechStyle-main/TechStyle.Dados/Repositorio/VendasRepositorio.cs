@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,9 @@ namespace TechStyle.Dados.Repositorio
 
         public override Vendas SelecionarPorId(int id)
         {
-            return SelecionarPorId(id);
+            return contexto.Venda.Include(x => x.ItemDeVenda)
+                                 .ThenInclude(p => p.Produto)
+                                 .FirstOrDefault(i => i.Id == id); //todo inclui metodo para retornar os produtos
         }
     }
 }

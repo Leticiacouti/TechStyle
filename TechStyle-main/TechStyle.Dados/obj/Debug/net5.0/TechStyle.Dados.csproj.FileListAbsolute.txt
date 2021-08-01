@@ -34,3 +34,21 @@ C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0
 C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\ref\TechStyle.Dados.dll
 C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.pdb
 C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.genruntimeconfig.cache
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\TechStyle.Dados.deps.json
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\TechStyle.Dados.runtimeconfig.json
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\TechStyle.Dados.runtimeconfig.dev.json
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\TechStyle.Dados.dll
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\ref\TechStyle.Dados.dll
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\TechStyle.Dados.pdb
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\TechStyle.Dominio.dll
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\bin\Debug\net5.0\TechStyle.Dominio.pdb
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.csproj.AssemblyReference.cache
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.AssemblyInfoInputs.cache
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.AssemblyInfo.cs
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.csproj.CoreCompileInputs.cache
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.csproj.CopyComplete
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.dll
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\ref\TechStyle.Dados.dll
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.pdb
+C:\Users\Vini\Desktop\techstyle final\TechStyle-main\TechStyle.Dados\obj\Debug\net5.0\TechStyle.Dados.genruntimeconfig.cache

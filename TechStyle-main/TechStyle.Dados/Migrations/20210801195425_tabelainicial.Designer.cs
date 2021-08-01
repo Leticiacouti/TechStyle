@@ -9,8 +9,8 @@ using TechStyle.Dados;
 namespace TechStyle.Dados.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210801192851_BancoTechStyle")]
-    partial class BancoTechStyle
+    [Migration("20210801195425_tabelainicial")]
+    partial class tabelainicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

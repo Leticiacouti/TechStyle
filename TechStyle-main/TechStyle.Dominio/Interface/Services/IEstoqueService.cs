@@ -11,9 +11,10 @@ namespace TechStyle.Dominio.Interface.Services
     public interface IEstoqueService
     {
         bool CadastrarProdutoNoEstoque(EstoqueDTO dto);
-        bool AlterarLocal(int idEstoque, EstoqueDTO dto);
-        bool AlterarQuantidadeMinima(int idEstoque, EstoqueDTO dto);
+        bool AlterarLocal(int idEstoque, string local);
+        bool AlterarQuantidadeMinima(int idEstoque, double valor);
         List<Estoque> SelecionarTudo();
         Estoque SelecionarPorId(int id);
+        void SomarEstoque(int id, int quant); //todo adicionei
     }
 }

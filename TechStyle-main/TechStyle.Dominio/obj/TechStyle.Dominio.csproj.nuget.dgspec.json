@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {}
+    "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+    "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
         "projectName": "TechStyle.Dominio",
-        "projectPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Vini\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Leleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vini\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -60,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
