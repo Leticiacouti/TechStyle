@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using TechStyle.Dominio.Modelo;
+using TechStyle.Dominio.Interface.Repositorios;
 
 namespace TechStyle.Dados.Repositorio
 {
-    public class BaseRepositorio<T> where T: class, IEntity
+    public class BaseRepositorio<T> : IBaseRepositorio<T> where T: class, IEntity
     {
         protected readonly Contexto contexto;
-        public BaseRepositorio()
+        public BaseRepositorio(Contexto _contexto)
         {
-            contexto = new Contexto();
+            contexto = _contexto;
         }
 
         public virtual bool Incluir(T entity)
@@ -23,7 +24,7 @@ namespace TechStyle.Dados.Repositorio
             }
             catch (Exception e)
             {
-                return false;
+                throw;
             }
         }
 
@@ -34,7 +35,7 @@ namespace TechStyle.Dados.Repositorio
             return true;
         }
 
-        public T SelecionarPorId(int id)
+        public virtual T SelecionarPorId(int id)
         {
             return contexto.Set<T>().FirstOrDefault(x => x.Id == id);
         }
@@ -42,6 +43,13 @@ namespace TechStyle.Dados.Repositorio
         public virtual List<T> SelecionarTudo()
         {
             return contexto.Set<T>().ToList();
+        }
+
+        public virtual bool Deletar(T entity)
+        {
+            contexto.Set<T>().Remove(entity);
+            contexto.SaveChanges();
+            return true;
         }
 
         public void Dispose()

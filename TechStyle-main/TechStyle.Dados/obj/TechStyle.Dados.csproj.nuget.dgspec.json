@@ -59,6 +59,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.8, )"
+            },
+            "UmbracoCms.Core": {
+              "target": "Package",
+              "version": "[8.15.1, )"
             }
           },
           "imports": [

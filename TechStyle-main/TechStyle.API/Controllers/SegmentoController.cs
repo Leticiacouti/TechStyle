@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TechStyle.API.DTO;
-using TechStyle.Dados.Repositorio;
+using TechStyle.Dominio.DTO;
+using TechStyle.Dominio.Interface.Services;
 using TechStyle.Dominio.Modelo;
+
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace TechStyle.API.Controllers
 {
@@ -13,46 +15,51 @@ namespace TechStyle.API.Controllers
     [ApiController]
     public class SegmentoController : ControllerBase
     {
-        private readonly SegmentoRepositorio _repo;
+        private readonly ISegmentoService _segmentoService;
 
-        public SegmentoController()
+        public SegmentoController(ISegmentoService segmentoService)
         {
-            _repo = new SegmentoRepositorio();
+            _segmentoService = segmentoService;
         }
 
         [HttpGet]
         public IEnumerable<Segmento> Get()
         {
-            return _repo.SelecionarTudo();
+            return _segmentoService.SelecionarTudo();
         }
 
         [HttpGet("{id}")]
-        public Segmento GetById(int id)
+        public Segmento Get(int id)
         {
-            return _repo.SelecionarPorId(id);
+            return _segmentoService.SelecionarPorId(id);
         }
 
         [HttpPost]
-        public void Post([FromBody] SegmentoDTO dto)
+        public IActionResult Post([FromBody] SegmentoDTO dto)
         {
-            var segmento = new Segmento();
-            segmento.Cadastrar(dto.Categoria, dto.SubCategoria);
-
-            _repo.Incluir(segmento);
+            var result = _segmentoService.Cadastrar(dto);
+            if (result == true)
+            {
+                return Ok("Segmento cadastrado!");
+            }
+            else
+            {
+                return BadRequest("Ocorreu um erro ao cadastrar!");
+            }
         }
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] SegmentoDTO dto)
+        [HttpPut("{id}/AlterarDados")]
+        public IActionResult PutAlterarDados(int id, [FromBody] SegmentoDTO dto)
         {
-            var segmento = new Segmento();
-            segmento.Alterar(id, dto.Categoria, dto.SubCategoria);
-            _repo.Alterar(segmento);
+            _segmentoService.Alterar(id, dto);
+            return Ok("Segmento alterado com sucesso!");
         }
 
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpPut("{id}/AlterarStatus")]
+        public IActionResult PutAlterarStatus(int id)
         {
-            _repo.AlterarStatus(id);
+            _segmentoService.AlterarStatus(id);
+            return Ok("Status do segmento alterado com sucesso!");
         }
     }
 }

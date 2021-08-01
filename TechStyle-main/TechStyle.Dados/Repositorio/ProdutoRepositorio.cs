@@ -1,61 +1,41 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using TechStyle.Dominio.Interface.Repositorios;
 using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dados.Repositorio
 {
-    public class ProdutoRepositorio : BaseRepositorio<Produto>
+    public class ProdutoRepositorio : BaseRepositorio<Produto>, IProdutoRepositorio
     {
-        public bool Incluir(string nome, string cor, string marca, string modelo, string material,
-                            string sku, string tamanho, Segmento segmento, decimal valorVenda)
+        private readonly Contexto _contexto;
+        public ProdutoRepositorio(Contexto contexto) : base(contexto)
         {
-            var produto = new Produto();
-            produto.Cadastrar(nome, material, cor, tamanho, modelo, marca, segmento.Id, sku, valorVenda);
+            _contexto = contexto;
+        }
 
-            if (Existe(produto))
-                return false;
-
+        public override bool Incluir(Produto produto)
+        {
             return base.Incluir(produto);
         }
 
-        public bool Alterar(int id, string nome, string material, string cor, string tamanho, string modelo,
-                            string marca, Segmento segmento, string sku, decimal valorVenda)
+        public override bool Alterar(Produto produto)
         {
-            var produtoEncontrado = SelecionarPorId(id);
-            Produto produtoNovo = new();
-            produtoNovo.Cadastrar(nome, material, cor, tamanho, modelo, marca, segmento.Id, sku, valorVenda);
-
-            if (!Existe(produtoNovo))
-            {
-                produtoEncontrado.AlterarItemProduto(nome, material, cor, tamanho, modelo, marca, segmento, sku, valorVenda);
-                return base.Alterar(produtoEncontrado);
-            }
-
-            return false;
+            return base.Alterar(produto);
         }
 
-        public bool AlterarValorVenda(int id, decimal valor)
+        public override Produto SelecionarPorId(int id)
         {
-            var produtoEncontrado = SelecionarPorId(id);
-
-            if (produtoEncontrado != null)
-            {
-                produtoEncontrado.AlterarValorVenda(valor);
-                contexto.SaveChanges();
-                return true;
-            }
-            else
-                return false;
+            return base.SelecionarPorId(id);
         }
 
-        public List<Produto> SelecionarTudo()
+        public override List<Produto> SelecionarTudo()
         {
-            return contexto.Produto.OrderBy(x => x.Id).ToList();
+            return base.SelecionarTudo();
         }
 
-        public bool Existe(Produto produto) //TODO: verificar se é necessario ter produtos com mesmos nomes
+        public Produto ProcurarPorNome(string nome)
         {
-            return contexto.Produto.Any(x => x.Nome.Trim().ToLower() == produto.Nome.Trim().ToLower());
+            return contexto.Produto.FirstOrDefault(x => x.Nome == nome);
         }
     }
 }

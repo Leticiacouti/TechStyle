@@ -1,64 +1,40 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using TechStyle.Dominio.Interface.Repositorios;
 using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dados.Repositorio
 {
-    public class SegmentoRepositorio : BaseRepositorio<Segmento>
+    public class SegmentoRepositorio : BaseRepositorio<Segmento>, ISegmentoRepositorio
     {
-        public bool Incluir(string categoria, string subcategoria)
+        private readonly Contexto _contexto;
+
+        public SegmentoRepositorio(Contexto contexto) : base(contexto)
         {
-            var segmento = new Segmento();
-            segmento.Cadastrar(categoria, subcategoria);
+            _contexto = contexto;
+        }
 
-            if (Existe(segmento))
-                return false;
-
+        public override bool Incluir(Segmento segmento)
+        {
             return base.Incluir(segmento);
         }
 
-        public bool Alterar(int id, string categoria, string subcategoria)
+        public override bool Alterar(Segmento segmento)
         {
-            var segmentoEncontrado = SelecionarPorId(id);
-
-            if (!Existe(segmentoEncontrado) || ExisteAlteracao(categoria, subcategoria))
-            {
-                return false;
-            }
-
-            segmentoEncontrado.Alterar(id, categoria, subcategoria);
-
-            return base.Alterar(segmentoEncontrado);
+            return base.Alterar(segmento);
         }
-
-        public void AlterarStatus(int id)
-        {
-            var segmentoEncontrado = SelecionarPorId(id);
-
-            segmentoEncontrado.AlterarStatus(!segmentoEncontrado.Ativo);
-            base.Alterar(segmentoEncontrado);
-        }
-
-        public List<Segmento> SelecionarPorCategoria(string categoria)
-        {
-            return contexto.Segmento.Where(x => x.Categoria.ToUpper() == categoria.Trim().ToUpper()).ToList();
-        }
-
         public override List<Segmento> SelecionarTudo()
         {
-            return base.SelecionarTudo().OrderBy(x => x.Categoria).ToList();
+            return base.SelecionarTudo();
         }
-
-        public bool Existe(Segmento segmento)
+        public override Segmento SelecionarPorId(int id)
         {
-            return contexto.Segmento.Any(x => x.Categoria.Trim().ToLower() == segmento.Categoria.Trim().ToLower()
-                                            && x.SubCategoria.Trim().ToLower() == segmento.SubCategoria.Trim().ToLower());
-
+            return base.SelecionarPorId(id);
         }
-        public bool ExisteAlteracao(string categoria, string subcategoria)
+        public bool ExisteAlteracao(string categoria, string subCategoria)
         {
-            return contexto.Segmento.Any(x => x.Categoria.ToUpper() == categoria.Trim().ToUpper()
-                                            && x.SubCategoria == subcategoria.Trim().ToUpper());
+            return _contexto.Segmento.Any(x => x.Categoria.ToUpper() == categoria.Trim().ToUpper()
+                                            && x.SubCategoria == subCategoria.Trim().ToUpper());
         }
     }
 }

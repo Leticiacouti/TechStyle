@@ -46,3 +46,15 @@ C:\Users\Leleh\Downloads\TechStyle-main-main\TechStyle-main-main\TechStyle-main\
 C:\Users\Leleh\Downloads\TechStyle-main-main\TechStyle-main-main\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.dll
 C:\Users\Leleh\Downloads\TechStyle-main-main\TechStyle-main-main\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\ref\TechStyle.Dominio.dll
 C:\Users\Leleh\Downloads\TechStyle-main-main\TechStyle-main-main\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.pdb
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\bin\Debug\net5.0\TechStyle.Dominio.deps.json
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\bin\Debug\net5.0\TechStyle.Dominio.dll
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\bin\Debug\net5.0\ref\TechStyle.Dominio.dll
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\bin\Debug\net5.0\TechStyle.Dominio.pdb
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.AssemblyInfoInputs.cache
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.AssemblyInfo.cs
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.dll
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\ref\TechStyle.Dominio.dll
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.pdb
+C:\Users\Leleh\Desktop\TechStyle\TechStyle-main\TechStyle.Dominio\obj\Debug\net5.0\TechStyle.Dominio.csproj.AssemblyReference.cache

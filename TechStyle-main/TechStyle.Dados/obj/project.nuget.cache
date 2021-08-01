@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QFyjnU1fmD3P53PDhP9U4fk8KK5fCwuNirRJ7tfR8EhWMwETNsBzRh7aQvfus4VSm5ESUfC6l4/n8RfFllvZKQ==",
+  "dgSpecHash": "3+NCAmgp95q+YVxA1yhljvQOkpGTM3S+OQjl77Kvh/t96GIzyKBxgckJ93dT8sRuhvU+X2MkS+ZbA+e1S4oHHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Leleh\\Desktop\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,19 @@
     "C:\\Users\\Leleh\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Leleh\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Leleh\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Leleh\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Leleh\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leleh\\.nuget\\packages\\umbracocms.core\\8.15.1\\umbracocms.core.8.15.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'UmbracoCms.Core 8.15.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "UmbracoCms.Core",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

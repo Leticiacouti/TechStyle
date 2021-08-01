@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using TechStyle.Dados.Map;
 using TechStyle.Dominio.Modelo;
 
@@ -6,27 +7,19 @@ namespace TechStyle.Dados
 {
     public class Contexto : DbContext
     {
-        public DbSet<Segmento> Segmento { get; set; }
+        public Contexto(DbContextOptions options) : base(options)
+        {
+        }
+
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Estoque> Estoque { get; set; }
-        public DbSet<Loja> Loja { get; set; }
-        public DbSet<Vendas> Vendas { get; set; }
-        public DbSet<ItemDeVenda> ItemDeVenda { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=; Database=TechStyle; Trusted_Connection=True");
-            base.OnConfiguring(optionsBuilder);
-        }
+        public DbSet<ItemDeVenda> ItemVenda { get; set; }
+        public DbSet<Vendas> Venda { get; set; }
+        public DbSet<Segmento> Segmento { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new SegmentoMap());
-            modelBuilder.ApplyConfiguration(new ProdutoMap());
-            modelBuilder.ApplyConfiguration(new EstoqueMap());
-            modelBuilder.ApplyConfiguration(new LojaMap());
-            modelBuilder.ApplyConfiguration(new VendasMap());
-            modelBuilder.ApplyConfiguration(new ItemDeVendaMap());
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }
     }

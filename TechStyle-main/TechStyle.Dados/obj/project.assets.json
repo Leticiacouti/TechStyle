@@ -1520,6 +1520,15 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "UmbracoCms.Core/8.15.1": {
+        "type": "package",
+        "compile": {
+          "lib/net472/Umbraco.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Umbraco.Core.dll": {}
+        }
+      },
       "TechStyle.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5798,6 +5807,20 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "UmbracoCms.Core/8.15.1": {
+      "sha512": "pYqzxUrfAkbI7STC/wITnHG86n6aXfH2+i1XvwgXf2zLXK+7XwvE0o/JQ6gqywLvVWoljgkFuThlBRxZWgBQbw==",
+      "type": "package",
+      "path": "umbracocms.core/8.15.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/Umbraco.Core.dll",
+        "lib/net472/Umbraco.Core.pdb",
+        "lib/net472/Umbraco.Core.xml",
+        "umbracocms.core.8.15.1.nupkg.sha512",
+        "umbracocms.core.nuspec"
+      ]
+    },
     "TechStyle.Dominio/1.0.0": {
       "type": "project",
       "path": "../TechStyle.Dominio/TechStyle.Dominio.csproj",
@@ -5808,7 +5831,8 @@
     "net5.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.8",
-      "TechStyle.Dominio >= 1.0.0"
+      "TechStyle.Dominio >= 1.0.0",
+      "UmbracoCms.Core >= 8.15.1"
     ]
   },
   "packageFolders": {
@@ -5871,6 +5895,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.8, )"
+          },
+          "UmbracoCms.Core": {
+            "target": "Package",
+            "version": "[8.15.1, )"
           }
         },
         "imports": [
@@ -5891,5 +5919,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'UmbracoCms.Core 8.15.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "UmbracoCms.Core",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

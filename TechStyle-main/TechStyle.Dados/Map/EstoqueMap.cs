@@ -12,21 +12,9 @@ namespace TechStyle.Dados.Map
 
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.QuantidadeMinima)
-                .HasColumnType("int")
-                .IsRequired();
-
-            builder.Property(x => x.QuantidadeTotal)
-                .HasColumnType("int")
-                .IsRequired();
-
-            builder.Property(x => x.Local)
-                .HasColumnType("varchar(100)")
-                .IsRequired();
-
-            builder.HasOne<Produto>(p => p.Produto)
-                   .WithOne(x => x.Estoque)
-                   .HasForeignKey<Estoque>(i => i.IdProduto);
+            builder.HasOne<Produto>(o => o.Produto)
+                   .WithOne(r => r.Estoque)
+                   .HasForeignKey<Estoque>(f => f.IdProduto);
         }
     }
 }

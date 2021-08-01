@@ -1,58 +1,42 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using TechStyle.Dados;
 using TechStyle.Dados.Repositorio;
+using TechStyle.Dominio.Interface.Repositorios;
 using TechStyle.Dominio.Modelo;
 
 namespace TechStyle.Dominio.Repositorio
 {
-    public class EstoqueRepositorio : BaseRepositorio<Estoque>
+    public class EstoqueRepositorio : BaseRepositorio<Estoque>, IEstoqueRepositorio
     {
-        public bool Incluir(Produto produto, int qtdMinima, string local)
+        public EstoqueRepositorio(Contexto contexto) : base(contexto)
         {
-            var estoque = new Estoque();
-            estoque.Cadastrar(produto.Id, qtdMinima, local);
 
-            if (Existe(estoque))
-                return false;
-
+        }
+        public override bool Incluir(Estoque estoque)
+        {
             return base.Incluir(estoque);
         }
 
-        public bool AlterarLocal(int id, string local)
+        public override bool Alterar(Estoque estoque)
         {
-            Estoque estoqueEncontrado = SelecionarPorId(id);
-            estoqueEncontrado.AlterarLocal(local);
-            return base.Alterar(estoqueEncontrado);
+            return base.Alterar(estoque);
         }
 
-        public void AlterarQtdMinima(int id, int qtdMin)
+        public Estoque PesquisarPorProduto(int idProduto)
         {
-            Estoque estoqueEncontrado = SelecionarPorId(id);
-            estoqueEncontrado.AlterarQuantidadeMinima(qtdMin);
-            base.Alterar(estoqueEncontrado);
+            return contexto.Estoque.FirstOrDefault(x => x.IdProduto == idProduto);
         }
 
-        //Filtro para os itens do produto
-        //public List<Segmento> SelecionarPorNome(string nome)
-        //{
-        //    return listaDeSegmentos.Where(x => x.Categoria.ToUpper() == categoria.Trim().ToUpper()).ToList();
-        //}
-
-        public List<Estoque> SelecionarTudo()
+        public override List<Estoque> SelecionarTudo()
         {
-            return contexto.Estoque.OrderBy(x => x.Id).ToList();
+            return base.SelecionarTudo();
         }
 
-        public Estoque SelecionarPorProduto(Produto produto)
+        public override Estoque SelecionarPorId(int id)
         {
-            contexto.Estoque.Include(e => e.Produto).ToList();
-            return contexto.Estoque.FirstOrDefault(x => x.Produto.Id == produto.Id);
-        }
-
-        public bool Existe(Estoque estoque)
-        {
-            return contexto.Estoque.Any(x => x.Produto == estoque.Produto);
+            return base.SelecionarPorId(id);
         }
     }
 }

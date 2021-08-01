@@ -8,16 +8,17 @@ namespace TechStyle.Dados.Map
     {
         public void Configure(EntityTypeBuilder<ItemDeVenda> builder)
         {
-            builder.ToTable("Item de Venda");
-            builder.HasKey(x => x.Id);
+            builder.ToTable("ItemVenda");
 
-            builder.Property(x => x.Quantidade)
-                   .HasColumnType("int")
-                   .IsRequired();
+            builder.HasKey(x => new { x.IdProduto, x.IdVenda });
 
-            builder.HasOne<Produto>(p => p.Produto)
-                   .WithMany(x => x.ItemDeVenda)
-                   .HasForeignKey(u => u.IdProduto);
+            builder.HasOne<Produto>(f => f.Produto)
+                .WithMany(d => d.ItemDeVenda)
+                .HasForeignKey(k => k.IdProduto);
+
+            builder.HasOne<Vendas>(f => f.Vendas)
+                .WithMany(d => d.ItemDeVenda)
+                .HasForeignKey(k => k.IdVenda);
         }
     }
 }

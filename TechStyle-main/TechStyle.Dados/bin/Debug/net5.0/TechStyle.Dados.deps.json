@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.8",
-          "TechStyle.Dominio": "1.0.0"
+          "TechStyle.Dominio": "1.0.0",
+          "UmbracoCms.Core": "8.15.1"
         },
         "runtime": {
           "TechStyle.Dados.dll": {}
@@ -1067,6 +1068,14 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "UmbracoCms.Core/8.15.1": {
+        "runtime": {
+          "lib/net472/Umbraco.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.15.1.0"
+          }
+        }
+      },
       "TechStyle.Dominio/1.0.0": {
         "runtime": {
           "TechStyle.Dominio.dll": {}
@@ -1758,6 +1767,13 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "UmbracoCms.Core/8.15.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pYqzxUrfAkbI7STC/wITnHG86n6aXfH2+i1XvwgXf2zLXK+7XwvE0o/JQ6gqywLvVWoljgkFuThlBRxZWgBQbw==",
+      "path": "umbracocms.core/8.15.1",
+      "hashPath": "umbracocms.core.8.15.1.nupkg.sha512"
     },
     "TechStyle.Dominio/1.0.0": {
       "type": "project",

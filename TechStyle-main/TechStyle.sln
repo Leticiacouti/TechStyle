@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechStyle.UI", "TechStyle.Console\TechStyle.UI.csproj", "{E71CE05F-F2ED-430E-ABDA-44DD78225BDD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechStyle.Dominio", "TechStyle.Dominio\TechStyle.Dominio.csproj", "{D95EA3CC-336C-48E8-8487-59A66B3CCB29}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechStyle.Dados", "TechStyle.Dados\TechStyle.Dados.csproj", "{EADF620C-90C5-40DD-B63C-A0DA0305096A}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E71CE05F-F2ED-430E-ABDA-44DD78225BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E71CE05F-F2ED-430E-ABDA-44DD78225BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E71CE05F-F2ED-430E-ABDA-44DD78225BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E71CE05F-F2ED-430E-ABDA-44DD78225BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D95EA3CC-336C-48E8-8487-59A66B3CCB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D95EA3CC-336C-48E8-8487-59A66B3CCB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D95EA3CC-336C-48E8-8487-59A66B3CCB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
