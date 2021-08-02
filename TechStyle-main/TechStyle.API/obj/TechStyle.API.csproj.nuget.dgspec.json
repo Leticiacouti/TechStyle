@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj": {}
+    "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj": {
+    "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
+        "projectUniqueName": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
         "projectName": "TechStyle.API",
-        "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
-        "packagesPath": "C:\\Users\\Vini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.API\\obj\\",
+        "projectPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.API\\TechStyle.API.csproj",
+        "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Vini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -32,11 +34,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
-                "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj"
+              "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
+                "projectPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj"
               },
-              "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
-                "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
+              "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+                "projectPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
               }
             }
           }
@@ -84,26 +86,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
+    "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
+        "projectUniqueName": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
         "projectName": "TechStyle.Dados",
-        "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
-        "packagesPath": "C:\\Users\\Vini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dados\\obj\\",
+        "projectPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dados\\TechStyle.Dados.csproj",
+        "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dados\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Vini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -116,8 +120,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
-                "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
+              "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+                "projectPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj"
               }
             }
           }
@@ -166,26 +170,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
+    "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+        "projectUniqueName": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
         "projectName": "TechStyle.Dominio",
-        "projectPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Vini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vini\\Desktop\\techstyle final\\TechStyle-main\\TechStyle.Dominio\\obj\\",
+        "projectPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\TechStyle.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Leleh\\.nuget\\packages\\",
+        "outputPath": "D:\\Leticia\\Tech Bank\\Projetos C#\\TechStyle\\TechStyle-main\\TechStyle.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Vini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -224,7 +230,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
